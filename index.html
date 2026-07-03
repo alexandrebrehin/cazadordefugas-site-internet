@@ -1039,7 +1039,6 @@
         '<b>Nombre:</b> '+esc(state.nombre)+'<br>'+
         '<b>Contacto:</b> '+esc(state.contacto)+'<br>'+
         '<b>Prefiere:</b> '+esc(state.pref);
-      root.querySelector('.send-wa').href='https://wa.me/'+BIZ_PHONE+'?text='+encodeURIComponent(buildText());
      // Envío automático por email vía Web3Forms
       var formData=new FormData();
       formData.append('access_key','87014f60-449e-44dd-a17b-84269bc45b40');
@@ -1054,10 +1053,6 @@
       show(4);
     });
 
-    root.querySelector('.send-mail').addEventListener('click',function(){
-      window.location.href='mailto:'+BIZ_EMAIL+'?subject='+encodeURIComponent('Nueva solicitud de visita')+
-        '&body='+encodeURIComponent(buildText());
-    });
 
     root.querySelector('.sol-restart').addEventListener('click',function(){
       opts.forEach(function(x){x.classList.remove('sel');});
