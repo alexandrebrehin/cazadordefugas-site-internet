@@ -1000,7 +1000,7 @@
     otherText.addEventListener('input',function(){state.other=otherText.value.trim(); validate1();});
 
     // Paso 2
-    var city=root.querySelector('.city-input');
+    var city=root.querySelector('.city-input'); 
     var next2=root.querySelector('[data-step="2"] .next');
     city.addEventListener('input',function(){state.city=city.value.trim(); next2.disabled=state.city.length<2;});
 
